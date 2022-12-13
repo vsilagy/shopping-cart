@@ -7,12 +7,12 @@ const Shop = () => {
 			<div>
 				<h2 className="p-4 font-bold text-4xl">All Coffee</h2>
 			</div>
-			<div className="w-full py-4 flex flex-wrap justify-center gap-4 md:gap-8">
+			<div className="w-full py-4 flex flex-wrap justify-center gap-x-6 gap-4 md:gap-8">
 				{SHOP_DATA.map((data) => {
 					return (
 						<div
 							key={data.id}
-							className="bg-red-200 w-72 h-[30rem] rounded flex flex-col items-center">
+							className="bg-red-200 w-80 h-[31rem] rounded flex flex-col items-center">
 							<img src={data.image} className="w-80" />
 							<div className="px-4 gap-2">
 								<p className="font-bold text-2xl text-gray-500">
