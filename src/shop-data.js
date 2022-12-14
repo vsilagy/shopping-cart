@@ -30,7 +30,7 @@ const SHOP_DATA = [
 	{
 		id: 2,
 		company: 'Mother Tongue',
-		name: 'Nebula - A Dark Roast',
+		name: 'Nebula Dark Roast',
 		text: `Super honey-sweet and full-bodied, this comforting cup's rich chocolaty notes and hint of roast will satisfy any sweet tooth.`,
 		taste: 'Comforting & Rich',
 		image: coffee2,
@@ -57,7 +57,7 @@ const SHOP_DATA = [
 	{
 		id: 5,
 		company: 'Cuvee',
-		name: 'Emporioum House Blend',
+		name: 'Emporioum Blend',
 		text: 'Coffee should bring people together. This blend manages to unite three distinctly delicious single origins to create a truly harmonious coffee. Complex but approachable, no matter how you brew it.',
 		taste: 'Sweet & Smooth',
 		image: coffee5,

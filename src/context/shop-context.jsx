@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import { createContext, useState } from 'react';
 import SHOP_DATA from '../shop-data';
 
 const ShopContext = createContext(null);
@@ -11,24 +11,52 @@ const defaultCart = () => {
 	return cart;
 };
 export const ShopContextProvider = (props) => {
-	const [item, setItem] = useState(defaultCart());
+	const [items, setItems] = useState(defaultCart());
 
-	const addToCart = (itemId) => {
-		setItem((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+	const getTotal = () => {
+		let total = 0;
+		for (let item in items) {
+			if (items[item] > 0) {
+				let itemInfo = SHOP_DATA.find(
+					(data) => data.id === Number(item),
+				);
+				total += items[item] * itemInfo.price;
+			}
+		}
+		return total;
 	};
 
-	const removeFromCart = (itemId) => {
-		setItem((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+	const getCounter = () => {
+		let total = 0;
+		for (let item in items) {
+			if (items[item] > 0) {
+				let itemInfo = SHOP_DATA.find(
+					(data) => data.id === Number(item),
+				);
+				total += items[item];
+			}
+		}
+		return total;
+	};
+
+	const incrementItems = (itemId) => {
+		setItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+	};
+
+	const decrementItems = (itemId) => {
+		setItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
 	};
 
 	const updateCart = (newAmount, itemId) => {
-		setItem((prev) => ({ ...prev, [itemId]: newAmount }));
+		setItems((prev) => ({ ...prev, [itemId]: newAmount }));
 	};
 	const contextValue = {
-		item,
-		addToCart,
-		removeFromCart,
+		items,
+		incrementItems,
+		decrementItems,
 		updateCart,
+		getTotal,
+		getCounter,
 	};
 
 	return (
