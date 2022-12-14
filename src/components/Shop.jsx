@@ -6,7 +6,7 @@ const Shop = () => {
 	const { item, addToCart } = useContext(ShopContext);
 
 	return (
-		<div className="max-w-screen-lg mx-auto">
+		<div className="relative max-w-screen-lg mx-auto">
 			<div>
 				<h2 className="p-4 font-bold text-4xl">All Coffee</h2>
 			</div>

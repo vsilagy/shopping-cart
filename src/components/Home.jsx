@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 	return (
-		<div className="h-full max-w-screen-lg mx-auto lg:h-5/6">
+		<div className="relative max-w-screen-lg mx-auto">
 			<div className="relative max-w-sceen-lg h-96 flex flex-col items-center justify-center">
 				<h1 className="z-20 text-white font-bold text-4xl p-4 ">
 					Your mornings are better with Trade Coffee.

@@ -4,8 +4,8 @@ import { AiOutlineShopping } from 'react-icons/ai';
 
 const Navbar = () => {
 	return (
-		<nav className="w-full">
-			<div className="max-w-screen-lg mx-auto p-4 flex items-center justify-between ">
+		<nav className="relative w-full max-w-screen-lg mx-auto">
+			<div className=" p-4 flex items-center justify-between ">
 				<h1 className="text-3xl font-bold">Trade</h1>
 				<div className="flex items-center gap-4 text-xl font-semibold">
 					<Link to="/">Home</Link>
