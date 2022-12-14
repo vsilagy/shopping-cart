@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
 	return (
-		<div className="h-screen max-w-screen-lg mx-auto">
+		<div className="h-full max-w-screen-lg mx-auto lg:h-5/6">
 			<div className="relative max-w-sceen-lg h-96 flex flex-col items-center justify-center">
 				<h1 className="z-20 text-white font-bold text-4xl p-4 ">
-					Your mornings are better with Trade.
+					Your mornings are better with Trade Coffee.
 				</h1>
-				<button className="text-xl font-bold z-20 mt-8 px-8 py-2 bg-red-500/90">
+				<button className="text-xl font-bold z-20 mt-8 px-8 py-2 bg-red-500/90 hover:text-white hover:opacity-80">
 					<Link to="/shop">Buy Coffee</Link>
 				</button>
 				<video
@@ -19,7 +19,7 @@ const Home = () => {
 					loop
 					webkit-playsinline="true"
 					playsInline
-					className="absolute top-0 left-0 p-4 z-10 object-cover w-full h-full "
+					className="absolute top-0 left-0z-10 object-cover w-full h-full lg:rounded"
 				/>
 			</div>
 			<div className="relative p-4 mt-8">

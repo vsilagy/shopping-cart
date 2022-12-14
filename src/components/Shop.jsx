@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 import SHOP_DATA from '../shop-data';
+import ShopContext from '../context/shop-context';
 
 const Shop = () => {
+	const { item, addToCart } = useContext(ShopContext);
+
 	return (
 		<div className="max-w-screen-lg mx-auto">
 			<div>
@@ -20,14 +23,18 @@ const Shop = () => {
 								</p>
 								<p className="font-bold">{data.company}</p>
 								<p className="text-2xl font-bold">{data.name}</p>
-								{/* <p className="text-sm italic text-gray-500">
-									{data.text}
-								</p> */}
 								<p className="text-gray-500 font-bold">
 									${data.price}
 								</p>
-								<button className="bg-red-500 px-4 py-2 rounded text-center mt-2">
-									Add to Cart
+								<button
+									onClick={() => addToCart(data.id)}
+									className="mt-2 w-40 py-2 bg-red-500 rounded text-center font-semibold  hover:text-white hover:opacity-80">
+									Add to Cart{' '}
+									{item[data.id] > 0 && (
+										<span className="font-bold">
+											({item[data.id]})
+										</span>
+									)}
 								</button>
 							</div>
 						</div>
