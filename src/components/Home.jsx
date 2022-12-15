@@ -20,7 +20,7 @@ const Home = () => {
 					loop
 					webkit-playsinline="true"
 					playsInline
-					className="absolute top-0 left-0z-10 object-cover w-full h-full rounded"
+					className="absolute top-0 left-0z-10 object-cover w-full h-full lg:rounded"
 				/>
 			</div>
 			<div className="p-4 mt-8">

@@ -12,7 +12,9 @@ const Navbar = () => {
 			<div className="p-4 flex items-center justify-between ">
 				<h1 className="text-2xl font-bold md:text-3xl">Trade</h1>
 				<div className="flex items-center gap-4 font-semibold md:text-xl">
-					<Link to="/" className="hover:text-red-500">
+					<Link
+						to="/"
+						className="hover:text-red-500 active:text-teal-500">
 						Home
 					</Link>
 					<Link to="/shop" className="hover:text-red-500">

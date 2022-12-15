@@ -15,8 +15,8 @@ const Shop = () => {
 					return (
 						<div
 							key={data.id}
-							className="bg-red-200 w-60 h-96 md:w-80 md:h-[32rem] rounded flex flex-col items-center">
-							<img src={data.image} className="w-48 md:w-80" />
+							className="bg-red-200 w-72 h-96 md:w-80 md:h-[32rem] rounded flex flex-col items-center">
+							<img src={data.image} className="w-52 md:w-80" />
 							<div className="px-4 gap-2">
 								<p className="font-bold text-xl md:text-2xl">
 									{data.name}
